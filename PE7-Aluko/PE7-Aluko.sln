@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PE7-Aluko", "PE7-Aluko.csproj", "{3B7945F8-0722-491B-82BF-141EAA11F15C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3B7945F8-0722-491B-82BF-141EAA11F15C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B7945F8-0722-491B-82BF-141EAA11F15C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B7945F8-0722-491B-82BF-141EAA11F15C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B7945F8-0722-491B-82BF-141EAA11F15C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FFCC6C8C-D772-4B73-AAAC-1640AA1B1F38}
+	EndGlobalSection
+EndGlobal
