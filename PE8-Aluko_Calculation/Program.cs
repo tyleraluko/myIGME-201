@@ -7,10 +7,6 @@ using System.Threading.Tasks;
 /*
  * Tyler Aluko
  * IGME.201 - Practice Exercise #8
- * This practice exerxise contains three seperate console applications.
- * ...
- * ...
- * ...
  */
 namespace PE8_Aluko {
     
@@ -22,7 +18,14 @@ namespace PE8_Aluko {
         
         /*
          * Tyler Aluko
-         * ...
+         * main functionality
+         * defines ranges for x and y
+         * sets incremental to 0.1
+         * calculates array size
+         * creates the 3D array using [,,]
+         * stores array values
+         * nested for loop calculates incremented values for x then y, then stores values for x, y, z
+         * values then printed to console
          */
         static void Main(string[] args) {
 
