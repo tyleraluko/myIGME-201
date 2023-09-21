@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PE7-Sanabria", "PE7-Sanabria.csproj", "{A5ACBD14-4E8E-46A4-8F08-0E2DC76AEDFD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PE8-Aluko_DoubleQuotes", "PE8-Aluko_DoubleQuotes.csproj", "{8EF2C4A7-4BA6-407A-B3B6-012EA76C10BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A5ACBD14-4E8E-46A4-8F08-0E2DC76AEDFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A5ACBD14-4E8E-46A4-8F08-0E2DC76AEDFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A5ACBD14-4E8E-46A4-8F08-0E2DC76AEDFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A5ACBD14-4E8E-46A4-8F08-0E2DC76AEDFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EF2C4A7-4BA6-407A-B3B6-012EA76C10BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EF2C4A7-4BA6-407A-B3B6-012EA76C10BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EF2C4A7-4BA6-407A-B3B6-012EA76C10BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EF2C4A7-4BA6-407A-B3B6-012EA76C10BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {17DD7DD3-1DA0-4701-8610-B1E2967D99BD}
+		SolutionGuid = {1A5192E8-2E86-4F1B-AD9B-51CD20047E9F}
 	EndGlobalSection
 EndGlobal

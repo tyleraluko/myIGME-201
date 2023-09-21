@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A5ACBD14-4E8E-46A4-8F08-0E2DC76AEDFD}</ProjectGuid>
+    <ProjectGuid>{8EF2C4A7-4BA6-407A-B3B6-012EA76C10BE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>PE7_Sanabria</RootNamespace>
-    <AssemblyName>PE7-Sanabria</AssemblyName>
+    <RootNamespace>PE8_Aluko_DoubleQuotes</RootNamespace>
+    <AssemblyName>PE8-Aluko_DoubleQuotes</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PE7-Sanabria")]
+[assembly: AssemblyTitle("PE8-Aluko_DoubleQuotes")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PE7-Sanabria")]
+[assembly: AssemblyProduct("PE8-Aluko_DoubleQuotes")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("a5acbd14-4e8e-46a4-8f08-0e2dc76aedfd")]
+[assembly: Guid("8ef2c4a7-4ba6-407a-b3b6-012ea76c10be")]
 
 // Version information for an assembly consists of the following four values:
 //
