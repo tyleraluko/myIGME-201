@@ -10,7 +10,7 @@ namespace PE6_Aluko {
      * IGME.201 - Practice Exercise #6
      * Number guessing game; The program will generate a random number (0-100), and the user will attempt to guess it!
      */
-    internal class Program {
+    static class Program {
         
         /*
          * Tyler Aluko
