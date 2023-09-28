@@ -41,13 +41,18 @@ namespace MyEditor {
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e) {
+            //empty VS-generated method must be left alone :(
+        }
+        
+        private void NewToolStripMenuItem__Click(object sender, EventArgs e) {
             
             //clears rich text box contents
             richTextBox.Clear();
             this.Text = "MyEditor"; //then reset text
+
         }
 
-        private void OpenToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void OpenToolStripMenuItem__Click(object sender, EventArgs e) {
             
             //i have no idea what i'm doing tbh
             if(openFileDialog.ShowDialog() == DialogResult.OK) {
@@ -55,53 +60,55 @@ namespace MyEditor {
                 RichTextBoxStreamType richTextBoxStreamType = RichTextBoxStreamType.RichText;
                 
                 if(openFileDialog.FileName.ToLower().Contains(".txt")) {
-                    //if .txt, convert to plain text?
-                    RichTextBoxStreamType richTextBoxStreamType = RichTextBoxStreamType.PlainText;
+                    //if .txt, convert to plain text? - correct!
+                    richTextBoxStreamType = RichTextBoxStreamType.PlainText;
                 }
                 
-                richTextBox.LoadFile(openFileDialog.FileName, RichTextBoxStreamType);
+                richTextBox.LoadFile(openFileDialog.FileName, richTextBoxStreamType);
 
                 //set to name of file being edited
                 this.Text = "MyEditor (" + openFileDialog.FileName + ")";
+
             }
+
         }
 
-        private void SaveToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void SaveToolStripMenuItem__Click(object sender, EventArgs e) {
 
             saveFileDialog.FileName = openFileDialog.FileName;
 
-            //i have no idea what i'm doing tbh
-            if (saveFileDialog.ShowDialog() == DialogResult.OK)
-            {
+            //i have some idea of what i'm doing now, maybe?
+            if (saveFileDialog.ShowDialog() == DialogResult.OK) {
 
                 RichTextBoxStreamType richTextBoxStreamType = RichTextBoxStreamType.RichText;
 
-                if (saveleDialog.FileName.ToLower().Contains(".txt"))
-                {
-                    //if .txt, convert to plain text?
-                    RichTextBoxStreamType richTextBoxStreamType = RichTextBoxStreamType.PlainText;
+                if (saveFileDialog.FileName.ToLower().Contains(".txt")) {
+                    //if .txt, convert to plain text? - correct (again)!
+                    richTextBoxStreamType = RichTextBoxStreamType.PlainText;
                 }
 
                 richTextBox.SaveFile(saveFileDialog.FileName, richTextBoxStreamType);
 
                 //set to name of file being edited
                 this.Text = "MyEditor (" + saveFileDialog.FileName + ")";
+
             }
+
         }
 
-        private void ExitToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void ExitToolStripMenuItem__Click(object sender, EventArgs e) {
             Application.Exit();
         }
 
-        private void CopyToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void CopyToolStripMenuItem__Click(object sender, EventArgs e) {
             richTextBox.Copy();
         }
 
-        private void CutToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void CutToolStripMenuItem__Click(object sender, EventArgs e) {
             richTextBox.Cut();
         }
 
-        private void PasteToolStripMenuItem_Click(object sender, EventArgs e) {
+        private void PasteToolStripMenuItem__Click(object sender, EventArgs e) {
             richTextBox.Paste();
         }
 
@@ -158,15 +165,14 @@ namespace MyEditor {
 
         }
 
-        private void fileToolStripMenuItem_Click(object sender, EventArgs e)
-        {
+        private void fileToolStripMenuItem_Click(object sender, EventArgs e) {
 
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
+        private void richTextBox1_TextChanged(object sender, EventArgs e) {
 
         }
 
     }
+
 }
