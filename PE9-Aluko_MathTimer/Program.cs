@@ -9,7 +9,7 @@ namespace PE9_Aluko_MathTimer {
     /*
      * Tyler Aluko
      * IGME.201 - Practice Exercise #9
-     * ...
+     * ... 
      */
     internal class Program {
         
