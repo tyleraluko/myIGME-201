@@ -12,7 +12,7 @@ using System.Windows.Forms;
  * Tyler Aluko
  * IGME.201 - Tutorial #1
  * I haven't a clue what's goin on here, but I'll act like I do!
- * * I figured out what's going on here (kinda)!
+ * * I figured out what's going on here (kinda)! 
  */
 namespace MyEditor {
 
