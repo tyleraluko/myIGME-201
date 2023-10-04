@@ -21,7 +21,7 @@ namespace MyEditor {
         public Form1() {
             
             InitializeComponent();
-
+            
             //event handlers on mouse click for menu items
             
             //file
