@@ -1,0 +1,5 @@
+// {type:class}
+// {generate:true}
+// {direction:topDown}
+
+[+MyClass|-myString]
