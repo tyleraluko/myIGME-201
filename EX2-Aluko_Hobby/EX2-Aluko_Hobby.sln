@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34221.43
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EX2-Aluko_Hobby", "EX2-Aluko_Hobby.csproj", "{62B465FC-2B8F-4329-8240-2C326216D216}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{62B465FC-2B8F-4329-8240-2C326216D216}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62B465FC-2B8F-4329-8240-2C326216D216}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62B465FC-2B8F-4329-8240-2C326216D216}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62B465FC-2B8F-4329-8240-2C326216D216}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {03A3DCD5-2C53-41DB-90E3-1AE453322BC9}
+	EndGlobalSection
+EndGlobal

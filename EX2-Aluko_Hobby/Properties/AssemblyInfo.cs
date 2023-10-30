@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("EX1-Aluko_4")]
+[assembly: AssemblyTitle("EX2-Aluko_Hobby")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("EX1-Aluko_4")]
+[assembly: AssemblyProduct("EX2-Aluko_Hobby")]
 [assembly: AssemblyCopyright("Copyright ©  2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("282e0a0f-66e9-47b9-b74b-44d91b8d04f8")]
+[assembly: Guid("62b465fc-2b8f-4329-8240-2c326216d216")]
 
 // Version information for an assembly consists of the following four values:
 //
