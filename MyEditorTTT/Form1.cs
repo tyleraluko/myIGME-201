@@ -19,22 +19,34 @@ namespace MyEditor {
 
     public partial class Form1 : Form {
         
-        public Form1() {
+        public Form1(MyEditorParent myEditorParent) {
             
             InitializeComponent();
-            
+
+            //MDI parent
+            this.MdiParent = myEditorParent;
+
             //event handlers on mouse click for menu items
-            
+
             //file
-            this.newToolStripMenuItem.Click += new EventHandler(NewToolStripMenuItem__Click); //new option
-            this.openToolStripMenuItem.Click += new EventHandler(OpenToolStripMenuItem__Click); //open option
-            this.saveToolStripMenuItem.Click += new EventHandler(SaveToolStripMenuItem__Click); //save option
-            this.exitToolStripMenuItem.Click += new EventHandler(ExitToolStripMenuItem__Click); //exit option
+            //this.newToolStripMenuItem.Click += new EventHandler(NewToolStripMenuItem__Click); //new option
+            //this.openToolStripMenuItem.Click += new EventHandler(OpenToolStripMenuItem__Click); //open option
+            //this.saveToolStripMenuItem.Click += new EventHandler(SaveToolStripMenuItem__Click); //save option
+            //this.exitToolStripMenuItem.Click += new EventHandler(ExitToolStripMenuItem__Click); //exit option
+
+            myEditorParent.openToolStripMenuItem.Click += new EventHandler(OpenToolStripMenuItem__Click); //handled by parent
+            myEditorParent.saveToolStripMenuItem.Click += new EventHandler(SaveToolStripMenuItem__Click); //handled by parent
 
             //edit
-            this.copyToolStripMenuItem.Click += new EventHandler(CopyToolStripMenuItem__Click); //copy option
-            this.cutToolStripMenuItem.Click += new EventHandler(CutToolStripMenuItem__Click); //cut option
-            this.pasteToolStripMenuItem.Click += new EventHandler(PasteToolStripMenuItem__Click); //paste option
+            //this.copyToolStripMenuItem.Click += new EventHandler(CopyToolStripMenuItem__Click); //copy option
+            //this.cutToolStripMenuItem.Click += new EventHandler(CutToolStripMenuItem__Click); //cut option
+            //this.pasteToolStripMenuItem.Click += new EventHandler(PasteToolStripMenuItem__Click); //paste option
+
+            myEditorParent.copyToolStripMenuItem.Click += new EventHandler(CopyToolStripMenuItem__Click);
+            myEditorParent.cutToolStripMenuItem.Click += new EventHandler(CutToolStripMenuItem__Click);
+            myEditorParent.pasteToolStripMenuItem.Click += new EventHandler(PasteToolStripMenuItem__Click);
+
+            myEditorParent.closeAllToolStripMenuItem.Click += new EventHandler(CloseAllToolStripMenuItem__Click); //new addition: close all
 
             //context tool tip
             this.boldToolStripMenuItem.Click += new EventHandler(BoldToolStripMenuItem__Click); //bold
@@ -57,6 +69,29 @@ namespace MyEditor {
             this.timer.Tick += new EventHandler(Timer__Tick);
 
             this.Text = "MyEditor";
+
+            //this.Show();
+
+            this.FormClosing += new FormClosingEventHandler(Form1__FormClosing);
+        }
+
+        private void Form1__FormClosing(object sender, FormClosingEventArgs e)
+        {
+            MyEditorParent myEditorParent = (MyEditorParent)this.MdiParent;
+            
+            myEditorParent.openToolStripMenuItem.Click -= new EventHandler(OpenToolStripMenuItem__Click); //handled by parent
+            myEditorParent.saveToolStripMenuItem.Click -= new EventHandler(SaveToolStripMenuItem__Click); //handled by parent
+
+            myEditorParent.copyToolStripMenuItem.Click -= new EventHandler(CopyToolStripMenuItem__Click);
+            myEditorParent.cutToolStripMenuItem.Click -= new EventHandler(CutToolStripMenuItem__Click);
+            myEditorParent.pasteToolStripMenuItem.Click -= new EventHandler(PasteToolStripMenuItem__Click);
+
+            myEditorParent.closeAllToolStripMenuItem.Click -= new EventHandler(CloseAllToolStripMenuItem__Click); //new addition: close all
+        }
+
+        private void CloseAllToolStripMenuItem__Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void newToolStripMenuItem_Click(object sender, EventArgs e) {
@@ -179,6 +214,11 @@ namespace MyEditor {
 
         private void OpenToolStripMenuItem__Click(object sender, EventArgs e) {
             
+            if(this.MdiParent.ActiveMdiChild != this)
+            {
+                return;
+            }
+            
             //i have no idea what i'm doing tbh
             if(openFileDialog.ShowDialog() == DialogResult.OK) {
             
@@ -199,6 +239,11 @@ namespace MyEditor {
         }
 
         private void SaveToolStripMenuItem__Click(object sender, EventArgs e) {
+
+            if (this.MdiParent.ActiveMdiChild != this)
+            {
+                return;
+            }
 
             saveFileDialog.FileName = openFileDialog.FileName;
 
@@ -226,15 +271,36 @@ namespace MyEditor {
         }
 
         private void CopyToolStripMenuItem__Click(object sender, EventArgs e) {
+
+            if (this.MdiParent.ActiveMdiChild != this)
+            {
+                return;
+            }
+
             richTextBox.Copy();
+
         }
 
         private void CutToolStripMenuItem__Click(object sender, EventArgs e) {
+
+            if (this.MdiParent.ActiveMdiChild != this)
+            {
+                return;
+            }
+
             richTextBox.Cut();
+
         }
 
         private void PasteToolStripMenuItem__Click(object sender, EventArgs e) {
+
+            if (this.MdiParent.ActiveMdiChild != this)
+            {
+                return;
+            }
+
             richTextBox.Paste();
+
         }
 
         private void ToolStrip__ItemClicked(object sender, ToolStripItemClickedEventArgs e) {
