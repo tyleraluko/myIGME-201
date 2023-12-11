@@ -18,29 +18,24 @@ using System.Threading;
 namespace MyEditor {
 
     public partial class Form1 : Form {
-        
+
+        //extra credit addition - test paragraph...
+        private readonly string testParagraph = "Engineers, as practitioners of engineering, are people who invent, design, analyze, build, and test machines, systems, structures and materials to fulfill objectives and requirements while considering the limitations imposed by practicality, regulation, safety, and cost. The work of engineers forms the link between scientific discoveries and their subsequent applications to human and business needs and quality of life.";
+        private int currentCharIndex; //track of current character user should type
+
+        //maybe it's this?
+
         public Form1(MyEditorParent myEditorParent) {
             
             InitializeComponent();
 
+            this.richTextBox.KeyPress += new KeyPressEventHandler(RichTextBox__KeyPress);
+
             //MDI parent
             this.MdiParent = myEditorParent;
 
-            //event handlers on mouse click for menu items
-
-            //file
-            //this.newToolStripMenuItem.Click += new EventHandler(NewToolStripMenuItem__Click); //new option
-            //this.openToolStripMenuItem.Click += new EventHandler(OpenToolStripMenuItem__Click); //open option
-            //this.saveToolStripMenuItem.Click += new EventHandler(SaveToolStripMenuItem__Click); //save option
-            //this.exitToolStripMenuItem.Click += new EventHandler(ExitToolStripMenuItem__Click); //exit option
-
             myEditorParent.openToolStripMenuItem.Click += new EventHandler(OpenToolStripMenuItem__Click); //handled by parent
             myEditorParent.saveToolStripMenuItem.Click += new EventHandler(SaveToolStripMenuItem__Click); //handled by parent
-
-            //edit
-            //this.copyToolStripMenuItem.Click += new EventHandler(CopyToolStripMenuItem__Click); //copy option
-            //this.cutToolStripMenuItem.Click += new EventHandler(CutToolStripMenuItem__Click); //cut option
-            //this.pasteToolStripMenuItem.Click += new EventHandler(PasteToolStripMenuItem__Click); //paste option
 
             myEditorParent.copyToolStripMenuItem.Click += new EventHandler(CopyToolStripMenuItem__Click);
             myEditorParent.cutToolStripMenuItem.Click += new EventHandler(CutToolStripMenuItem__Click);
@@ -106,17 +101,35 @@ namespace MyEditor {
 
         }
 
+        //extra credit addition - checks if pressed key matches expected character in test paragraph
+        private void RichTextBox__KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (currentCharIndex < testParagraph.Length && e.KeyChar == testParagraph[currentCharIndex])
+            {
+                currentCharIndex++;
+            }
+            else
+            {
+                e.Handled = true; //ignore key press if doesn't match expected character
+            }
+        }
+
+        //troubleshooting...
         private void TestToolStripButton__Click(object sender, EventArgs e)
         {
-            this.timer.Interval = 500;
+            this.timer.Interval = 1000; //1 sec -> was = 500
 
-            this.toolStripProgressBar1.Value = 60;
+            this.toolStripProgressBar1.Value = 60; //60 secs
 
             this.countdownLabel.Text = "3";
             this.countdownLabel.Visible = true;
             this.richTextBox.Visible = false;
 
-            for(int i = 3; i > 0; --i)
+            //extra credit addition
+            currentCharIndex = 0; //reset current character index
+            this.richTextBox.Text = " "; //clear text box before test starts
+
+            for (int i = 3; i > 0; i--)
             {
                 this.countdownLabel.Text = i.ToString();
                 this.Refresh();
@@ -125,21 +138,59 @@ namespace MyEditor {
 
             this.countdownLabel.Visible = false;
             this.richTextBox.Visible = true;
-
+            
             this.timer.Start();
+            this.timer.Tick += new EventHandler(Timer__Tick);
 
         }
 
         private void Timer__Tick(object sender, EventArgs e)
         {
-            --this.toolStripProgressBar1.Value;
-
-            if (this.toolStripProgressBar1.Value == 0)
+            if (this.toolStripProgressBar1.Value > 0)
             {
-                this.timer.Stop();
-                string performance = "Congrats! You typed " + Math.Round(this.richTextBox.TextLength / 30.0, 2) + "letters per second.";
-                MessageBox.Show(performance);
+                this.toolStripProgressBar1.Value--;
+
+                if (this.toolStripProgressBar1.Value == 0)
+                {
+                    this.timer.Stop();
+                    CheckTypedText(); //checks typed text against test paragraph
+                }
             }
+            
+            //--this.toolStripProgressBar1.Value;
+            
+            //if (this.toolStripProgressBar1.Value == 0)
+            //{
+                
+            //    this.timer.Stop();
+
+            //    /*
+            //    string performance = "Congrats! You typed " + Math.Round(this.richTextBox.TextLength / 30.0, 2) + "letters per second.";
+            //    MessageBox.Show(performance);
+            //    */
+
+            //    //extra credit addition
+            //    CheckTypedText(); //checks typed text against test paragraph
+            //}
+        }
+
+        //extra credit addition - checks typed text against test paragraph
+        private void CheckTypedText()
+        {
+            string typedText = this.richTextBox.Text;
+
+            int correctCharacters = 0;
+            for (int i = 0; i < Math.Min(testParagraph.Length, typedText.Length); i++)
+            {
+                if (testParagraph[i] == typedText[i])
+                {
+                    correctCharacters++;
+                }
+            }
+
+            double charactersPerSecond = correctCharacters / 30.0;
+            string performance = $"Congrats! You typed {Math.Round(charactersPerSecond, 2)} letters per second.";
+            MessageBox.Show(performance);
         }
 
 

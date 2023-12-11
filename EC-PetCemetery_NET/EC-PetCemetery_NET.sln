@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EC-PetCemetery_NET", "EC-PetCemetery_NET.csproj", "{F16E0A8B-2829-4D81-B7DD-C1400AAFE2BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F16E0A8B-2829-4D81-B7DD-C1400AAFE2BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F16E0A8B-2829-4D81-B7DD-C1400AAFE2BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F16E0A8B-2829-4D81-B7DD-C1400AAFE2BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F16E0A8B-2829-4D81-B7DD-C1400AAFE2BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1EDB5383-48BA-4760-96A3-D35668F7CC15}
+	EndGlobalSection
+EndGlobal
