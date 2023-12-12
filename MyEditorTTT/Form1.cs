@@ -19,6 +19,9 @@ namespace MyEditor {
 
     public partial class Form1 : Form {
 
+        //timer testing...
+        //...
+        
         //extra credit addition - test paragraph...
         private readonly string testParagraph = "Engineers, as practitioners of engineering, are people who invent, design, analyze, build, and test machines, systems, structures and materials to fulfill objectives and requirements while considering the limitations imposed by practicality, regulation, safety, and cost. The work of engineers forms the link between scientific discoveries and their subsequent applications to human and business needs and quality of life.";
         private int currentCharIndex; //track of current character user should type
@@ -117,9 +120,9 @@ namespace MyEditor {
         //troubleshooting...
         private void TestToolStripButton__Click(object sender, EventArgs e)
         {
-            this.timer.Interval = 1000; //1 sec -> was = 500
+            this.timer.Interval = 1000; //was 500
 
-            this.toolStripProgressBar1.Value = 60; //60 secs
+            this.toolStripProgressBar1.Value = 10; //60 secs
 
             this.countdownLabel.Text = "3";
             this.countdownLabel.Visible = true;
