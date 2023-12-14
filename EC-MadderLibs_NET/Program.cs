@@ -101,7 +101,7 @@ namespace EC_MadderLibs_NET
         {
 
             //hardcoded mad libs template path
-            string filePath = @"c:\\templates\\MadLibsTemplate2.txt";
+            string filePath = @"c:\\GitHub\\myIGME-201\\EC-MadderLibs_NET\\MadLibsTemplate2.txt";
 
             //validates correct file path (only needed for testing)
             if (!File.Exists(filePath))
