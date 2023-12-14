@@ -16,6 +16,10 @@ using System.Windows.Forms;
  * IGME.201 - Extra Credit, WinMath WinQuiz
  * A math quiz console application rewritten as a Windows Forms Application.
  * Prompts the user for the amount of questions they'd like to be asked, as well as the difficultty of the questions.
+ * 
+ * Notes:
+ * Didn't get to finish this one, sorry! ;-;
+ * Didn't get any useful comments in either. :/
  */
 namespace EC_WinMathWinQuiz
 {
