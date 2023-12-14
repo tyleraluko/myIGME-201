@@ -24,6 +24,10 @@ namespace MyEditor
             //form1
             Form1 form1 = new Form1(this);
             form1.Show();
+
+            //form3
+            Form3 form3 = new Form3();
+            form3.Show();
         }
 
         private void TileToolStripMenuItem__Click(object sender, EventArgs e)
